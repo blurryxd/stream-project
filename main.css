@@ -9,55 +9,38 @@ html{
 body{
     padding: 0;
     margin: 0;
-    background-color: lightskyblue;
+    background-color: #2d132c;
     height:100%;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
 }
 
-nav {
-    background-color:darkgray;
-    width:100%;
-    height:30px;
-    text-align:center;
-    background-color: rgba(0,0,0,0.8);
-    position:fixed;
-    z-index: 999;
-}
-
-div {
-    margin:0;
-    padding: 0;
-}
+/*General _____________________________________________________________________________________*/
 
 p {
     margin:0;
     padding:0;
-
-
     font-family: 'Manjari', sans-serif;
-
-
 }
 
-section{
+a {
+    font-family: 'Manjari', sans-serif;
+    color:white;
+    text-decoration: none;
 }
 
-#fp{
-    padding-top:30px;
-    height: auto;
-    min-height:100%;
-}
+/*nav _____________________________________________________________________________________*/
 
-#sp{
-    min-height:100%;
-    height: auto;
-}
-
-#textContainer {
-    padding-top:30px;
-    background-color:white;
-    width:70%;
-    margin: auto;
-
+nav {
+    width:100%;
+    height:30px;
+    text-align:center;
+    background-color:rgba(129, 19, 54, 0.8);
+    position:fixed;
+    z-index: 999;
 }
 
 nav a {
@@ -67,19 +50,124 @@ nav a {
 
 }
 
-a {
-
-
-    font-family: 'Manjari', sans-serif;
-
-
-    color:white;
-    text-decoration: none;
+nav a:hover{
+    transition: 0.5s;
+    background-color: #c72c41;
+    border-radius: 30px;
 }
 
-#videocontainer {
+
+/*first page _____________________________________________________________________________________*/
+
+#fp{
+    padding-top:30px;
+    height: auto;
+    min-height:100%;
+    background-image: url("img/bgtest.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
+}
+
+.textContainer{
+    padding-top: 2em;
+    color: white;
+    font-size: 1.4em;
+    width: 40%;
+    text-align: center;
+    margin:auto;
+    animation: lefToRight 4s;
+    -moz-animation: leftToRight 4s;
+}
+#bigArrow{
+    font-size: 10rem;
+    text-align: center;
+    margin:auto;
+    background-color:rgba(193, 66, 66, 0);
+    color:white;
+    border: none;
+    opacity: 0;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+/*second page _____________________________________________________________________________________*/
+
+#sp{
+    min-height:100%;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.videoContainer {
+    border: solid #801336 6px;
+    border-radius: 10px;
     width:1280px;
     height:720px;
     margin: auto;
-    padding-top:30px;
+}
+@media only screen and (max-width: 1300px) {
+    .videoContainer{
+        width:1000px;
+        height:562px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .videoContainer{
+        width:800px;
+        height:450px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .videoContainer{
+        width:600px;
+        height:337px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .videoContainer{
+        width:360px;
+        height:202px;
+    }
+}
+
+
+
+/*animation shit* _____________________________________________________________________________________*/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

@@ -18,42 +18,67 @@
 
 
 <section id="fp">
-    <div id="textContainer">
-        <p>
-            fdgdfgfdg
-        </p>
+    <div id="logoContainer">
+        <img src="img/logo.png">
+    </div>
+    <div class="textContainer">
+        <p id="infoText"></p>
+    </div>
+    <div id="bigArrow">
+    <a href="#sp"><span>&#10515;</span></a>
     </div>
 </section>
 
 <section id="sp">
-    <div id="videocontainer">
-    <div id="playerElement" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+    <div class="textContainer">
+        <p>The site is still under construction, thus only supporting our own stream as for now. We're sorry for inconvenience.</p>
+    </div>
+    <div class="videoContainer">
+        <div id="playerElement" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
     </div>
 </section>
-
-
-
-
-
-
 
 
 <script type="text/javascript">
     WowzaPlayer.create('playerElement',
         {
-            "license":"PLAY1-ejrM8-zjEKd-6A4J7-9JJnM-7kju6",
-            "title":"Teststream",
-            "description":"",
-            "sourceURL":"http%3A%2F%2F195.148.104.124%3A1935%2Fmobile%2Fjuhoooooo%2Fplaylist.m3u8",
-            "autoPlay":false,
+            "license": "PLAY1-ejrM8-zjEKd-6A4J7-9JJnM-7kju6",
+            "title": "Teststream",
+            "description": "",
+            "sourceURL": "http%3A%2F%2F195.148.104.124%3A1935%2Fmobile%2Fjuhoooooo%2Fplaylist.m3u8",
+            "autoPlay": false,
 
-            "volume":"75",
-            "mute":false,
-            "loop":false,
-            "uiShowQuickRewind":true,
-            "uiQuickRewindSeconds":"30"
+            "volume": "75",
+            "mute": false,
+            "loop": false,
+            "uiShowQuickRewind": true,
+            "uiQuickRewindSeconds": "30"
         }
     );
+
+    let info = ['C', 'h', 'e', 'r', 'r', 'y ', 'i', 's ', 'a ', 'l', 'i', 'v', 'e', 's', 't', 'r', 'e', 'a', 'm', 'i', 'n',
+        'g ', 's', 'i', 't', 'e ', 'd', 'e', 'd', 'i', 'c', 'a', 't', 'e', 'd ', 'f', 'o', 'r ', 'y', 'o', 'u ',
+        't', 'o ', 's', 'h', 'a', 'r', 'e ', 'y', 'o', 'u', 'r ', 'g', 'a', 'm', 'e', 'p', 'l', 'a', 'y ', 't', 'o ', 'y', 'o', 'u', 'r ',
+        'f', 'r', 'i', 'e', 'n', 'd', 's, ', 'f', 'a', 'm', 'i', 'l', 'y ', 'c', 'o', 'm', 'm', 'u', 'n', 'i', 't', 'y',
+        ' ', 'o', 'r ', 'a', 'n', 'y ', 'a', 'u', 'd', 'i', 'e', 'n', 'c', 'e ', 'y', 'o', 'u ', 'w', 'i', 's', 'h', '!'];
+    let infoLenght = info.length;
+    let i = 0;
+
+    const writeText = () => {
+        setTimeout(function () {
+            let currentText = document.querySelector('#infoText');
+            //console.log(document.querySelector('#infoText').innerHTML);
+            document.querySelector('#infoText').innerHTML = document.querySelector('#infoText').innerHTML + info[i];
+            i++;
+            if (i < infoLenght) {
+                writeText();
+            }
+        }, 20);
+    };
+
+    writeText();
+
+
 </script>
 
 

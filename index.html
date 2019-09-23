@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="//player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8">
+    <title>Cherry</title>
+</head>
+<body>
+
+<nav>
+    <a href=#fp>Home</a>
+    <a href=#sp>Stream</a>
+</nav>
+
+
+<section id="fp">
+    <div id="textContainer">
+        <p>
+            fdgdfgfdg
+        </p>
+    </div>
+</section>
+
+<section id="sp">
+    <div id="videocontainer">
+    <div id="playerElement" style="width:100%; height:0; padding:0 0 56.25% 0"></div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    WowzaPlayer.create('playerElement',
+        {
+            "license":"PLAY1-ejrM8-zjEKd-6A4J7-9JJnM-7kju6",
+            "title":"Teststream",
+            "description":"",
+            "sourceURL":"http%3A%2F%2F195.148.104.124%3A1935%2Fmobile%2Fjuhoooooo%2Fplaylist.m3u8",
+            "autoPlay":false,
+
+            "volume":"75",
+            "mute":false,
+            "loop":false,
+            "uiShowQuickRewind":true,
+            "uiQuickRewindSeconds":"30"
+        }
+    );
+</script>
+
+
+</body>
+</html>
